@@ -10,14 +10,14 @@ public class FileRouteBuilderTest extends CamelTestSupport {
 
 
     @Override
-    protected RoutesBuilder createRouteBuilder() throws Exception {
+    protected RoutesBuilder createRouteBuilder()  {
         return new FileRouteBuilder();
     }
 
 
     @Test
     public void testFileRoute() throws InterruptedException {
-        template.requestBodyAndHeader("file:directory?delete=true", "Hello", Exchange.FILE_NAME, "application.txt");
+        template.requestBodyAndHeader("file:directory?delete=true", "Hello", Exchange.FILE_NAME, "file.txt");
         Thread.sleep(5000);
     }
 
