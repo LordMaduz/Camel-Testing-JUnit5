@@ -1,4 +1,4 @@
-package com.spring.camel;
+package com.spring.camel.model;
 
 
 import lombok.Data;
